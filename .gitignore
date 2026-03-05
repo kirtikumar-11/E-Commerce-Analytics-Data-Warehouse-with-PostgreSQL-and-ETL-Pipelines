@@ -1,0 +1,26 @@
+# Environment variables (contains DB credentials — never commit this!)
+.env
+
+# Raw data files (too large for GitHub — download from Kaggle instead)
+data/*.csv
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
