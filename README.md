@@ -11,37 +11,8 @@ A fully functional **data warehouse** built with **PostgreSQL** and **Python**, 
 
 ## 🏗️ Architecture
 
-```mermaid
-flowchart LR
-    subgraph Sources["📁 Data Sources"]
-        CSV["CSV Files\n(Kaggle Dataset)"]
-    end
+<img width="2921" height="1124" alt="image" src="https://github.com/user-attachments/assets/939ebc0e-177d-4cc8-a45d-c707428d9e48" />
 
-    subgraph ETL["⚙️ ETL Pipeline (Python)"]
-        LOAD["Load CSVs\nto Raw Schema"]
-        T1["Staging\nTransformations"]
-        T2["Warehouse\nTransformations"]
-        T3["Analytics\nAggregations"]
-    end
-
-    subgraph DW["🗄️ PostgreSQL Data Warehouse"]
-        RAW["raw.*\n─────────────\ncustomers\norders\norder_items\nproducts\npayments"]
-        STG["staging.*\n─────────────\norders\norder_items"]
-        WH["warehouse.*\n─────────────\ndim_customers\ndim_products\nfact_orders"]
-        AN["analytics.*\n─────────────\ncustomer_lifetime_value\ntop_customers\nrevenue_monthly"]
-    end
-
-    CSV --> LOAD --> RAW
-    RAW --> T1 --> STG
-    STG --> T2 --> WH
-    WH --> T3 --> AN
-
-    style Sources fill:#2d333b,stroke:#444c56,color:#adbac7
-    style ETL fill:#1c2128,stroke:#444c56,color:#adbac7
-    style DW fill:#1c2128,stroke:#444c56,color:#adbac7
-```
-
----
 
 ## 📂 Project Structure
 
