@@ -63,7 +63,6 @@ flowchart LR
 │   ├── warehouse.sql       # Staging → Warehouse (dim/fact tables)
 │   └── analytics.sql       # Warehouse → Analytics aggregations
 │
-├── dashboard/              # (Planned) BI dashboard assets
 ├── .env.example            # Environment variable template
 ├── .gitignore
 ├── requirements.txt
